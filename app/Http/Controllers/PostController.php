@@ -9,6 +9,13 @@ use File;
 
 class PostController extends Controller
 {
+    public function Index()
+    {
+        $posts = Post::paginate(5);
+
+        return view('posts.index', ['posts' => $posts]);
+    }
+
     public function Create()
     {
 
@@ -41,9 +48,9 @@ class PostController extends Controller
     	}
 
     	return back()->with('message','error');
-	}
+    }
 
-	public function Edit($id)
+    public function Edit($id)
     {
         $p = Post::find($id);
 
@@ -54,8 +61,8 @@ class PostController extends Controller
 
         return view('posts.form',['post' => $p]);
     }
-	
-	public function Update($id, Request $req)
+
+    public function Update($id, Request $req)
     {
         $this->validate($req,[
             'title' => 'required|max:255',
@@ -89,9 +96,9 @@ class PostController extends Controller
         }
 
         return back()->with('error','error');
-	}
-	
-	public function Delete($id)
+    }
+
+    public function Delete($id)
     {
         $p = Post::find($id);
 
@@ -111,12 +118,5 @@ class PostController extends Controller
         }
 
         return back()->with('error','error');
-    }
-
-    public function Index()
-    {
-    	$posts = Post::paginate(2);
-
-    	return view('posts.index', ['posts' => $posts]);
     }
 }

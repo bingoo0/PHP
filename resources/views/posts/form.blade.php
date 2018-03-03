@@ -1,9 +1,8 @@
 @extends('layouts.master')
 
-@include('messages')
 
 @section('content')
-	
+	@include('messages')
 
 	<form method="POST" enctype="multipart/form-data">
 		{{csrf_field()}}
