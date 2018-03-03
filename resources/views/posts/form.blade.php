@@ -16,6 +16,7 @@
 
 	<form method="POST" enctype="multipart/form-data">
 		{{csrf_field()}}
+		<!-- {{method_field('PUT')}} -->
 		<input type="text" name="title" placeholder="Title" value="{{old('title')}}"/><br/>
 		<textarea name="text">{{old('text')}}</textarea><br/>
 		<input type="file" name="photo" /><br/>

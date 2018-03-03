@@ -1,8 +1,24 @@
 form input,
-button {
+button,
+textarea {
     overflow: visible;
     display: block;
     margin: 0 auto;
     margin-bottom: 10px;
     width: 100%;
+}
+
+.navbar-nav {
+    display: inline-block !important;
+    background: turquoise;
+    width: 100%;
+    text-align: center;
+    word-spacing: 50px;
+    border-radius: 10px;
+}
+
+.img-thumbnail {}
+
+.container {
+    display: flex;
 }

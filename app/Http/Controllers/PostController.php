@@ -40,11 +40,39 @@ class PostController extends Controller
     	}
 
     	return back()->with('message','error');
-    }
+	}
+	
+	public function Update(Request $req)
+	{
+		$this->validate($req,[
+    		'title' => 'required|max:255',
+    		'text' => 'required',
+    		'photo' => 'max:1024',
+    	]);
+
+    	$model = $req->all();
+
+    	$file = $model['photo'];
+
+    	if($file)
+    	{
+    		$fileName = str_random(5).$file->getClientOriginalName();
+    		$file->move('images', $fileName);
+    		$model['imagePath'] = 'images'.DIRECTORY_SEPARATOR.$fileName;
+    	}
+    	
+
+    	if(Post::create($model))
+    	{
+    		return back()->with('message','success');
+    	}
+
+    	return back()->with('message','error');
+	}
 
     public function Index()
     {
-    	$posts = Post::paginate(1);
+    	$posts = Post::paginate(2);
 
     	return view('posts.index', ['posts' => $posts]);
     }
