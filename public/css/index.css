@@ -1,0 +1,8 @@
+form input,
+button {
+    overflow: visible;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 100%;
+}
