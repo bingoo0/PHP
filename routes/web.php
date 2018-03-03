@@ -30,7 +30,9 @@ Route::group(['middleware'=>'auth'], function(){
 	Route::group(['middleware' => 'adminCheck'], function(){
 		Route::get('create-post','PostController@Create')->name('posts.create');
 		Route::post('create-post','PostController@Store')->name('posts.store');	
-	 	Route::post('update-post','PostController@Update')->name('posts.update');
+		Route::get('edit-post/{id}','PostController@Edit')->name('posts.edit');
+		Route::put('update-post/{id}','PostController@Update')->name('posts.update');
+		Route::delete('posts/delete/{id}','PostController@Delete')->name('posts.delete');
 	});
 });
 
