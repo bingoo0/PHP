@@ -24,7 +24,7 @@
 
       @if(Auth::user()->isAdmin === 1)
       <li class="nav-item">
-        <a class="nav-link" href="{{route('posts.create')}}">Create Post</a>
+        <a class="nav-link" href="{{route('posts.create')}}">Create</a>
       </li>
       @endif
       

@@ -12,7 +12,7 @@ class PostController extends Controller
     public function Create()
     {
 
-    	return view('posts.form');
+    	return view('posts.form',['post' => new Post]);
     }
 
     public function Store(Request $req)
