@@ -4,7 +4,7 @@
 
 @include('messages')
 
-<form method="POST">
+<form method="POST" class="create-post">
 	<input 
 		type="text" name="email" 
 		placeholder="Email..."

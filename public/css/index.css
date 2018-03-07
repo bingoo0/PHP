@@ -1,11 +1,12 @@
-form input,
-button,
-textarea {
-    overflow: visible;
-    display: block;
+.create-post {
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.create-post input,
+textarea {
     width: 100%;
+    margin-bottom: 15px;
 }
 
 .navbar-nav {
@@ -17,8 +18,16 @@ textarea {
     border-radius: 10px;
 }
 
-.img-thumbnail {}
+.navbar-nav li {
+    display: inline-table !important;
+}
 
-.container {
-    display: flex;
+.container {}
+
+.container>div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    width: 50%;
 }

@@ -3,8 +3,7 @@
 
 @section('content')
 	@include('messages')
-
-	<form method="POST" enctype="multipart/form-data">
+	<form method="POST" enctype="multipart/form-data" class="create-post">
 		{{csrf_field()}}
 		@if($post->id > 0)
 		{{method_field('PUT')}}

@@ -3,6 +3,7 @@
 
 @section('content')
 	@foreach($posts as $p)
+
 	<div>
 		<div>
 		{{$p->title}}
