@@ -45,19 +45,21 @@
         display: inline-block;
     }
     
-    .pagination a {
+    .pagination li {
         color: black;
         padding: 8px 16px;
         text-decoration: none;
     }
     
-    .pagination a.active {
-        background-color: #4CAF50;
+    .pagination li.active {
+        background-color: turquoise;
         color: white;
         border-radius: 5px;
+        text-decoration: none;
     }
     
-    .pagination a:hover:not(.active) {
+    .pagination li:hover:not(.active) {
         background-color: #ddd;
         border-radius: 5px;
+        text-decoration: none;
     }
