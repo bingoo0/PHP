@@ -1,33 +1,63 @@
-.create-post {
-    margin: 0 auto;
-    margin-bottom: 5px;
-}
-
-.create-post input,
-textarea {
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.navbar-nav {
-    display: inline-block !important;
-    background: turquoise;
-    width: 100%;
-    text-align: center;
-    word-spacing: 50px;
-    border-radius: 10px;
-}
-
-.navbar-nav li {
-    display: inline-table !important;
-}
-
-.container {}
-
-.container>div {
-    background-color: #f1f1f1;
-    margin: 10px;
-    padding: 20px;
-    font-size: 30px;
-    width: 50%;
-}
+    .create-post {
+        margin: 0 auto;
+        margin-bottom: 5px;
+    }
+    
+    .create-post input,
+    textarea {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .navbar-nav {
+        display: inline-block !important;
+        background: turquoise;
+        width: 100%;
+        text-align: center;
+        word-spacing: 50px;
+        border-radius: 10px;
+    }
+    
+    .navbar-nav li {
+        display: inline-table !important;
+    }
+    
+    .container {}
+    
+    .container>div {
+        background-color: #f1f1f1;
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+    }
+    
+    .row {
+        display: inline-block;
+        margin: 0 auto;
+    }
+    
+    img {
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    
+    .pagination {
+        display: inline-block;
+    }
+    
+    .pagination a {
+        color: black;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    
+    .pagination a.active {
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 5px;
+    }
+    
+    .pagination a:hover:not(.active) {
+        background-color: #ddd;
+        border-radius: 5px;
+    }

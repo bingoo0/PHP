@@ -4,7 +4,7 @@
 @section('content')
 	@foreach($posts as $p)
 
-	<div>
+	<div class="col-m-4">
 		<div>
 		{{$p->title}}
 		</div>
@@ -20,7 +20,7 @@
 				 >X</button>
 		</form>
 		@endif
-		<div class="col-4">
+		<div class="col-m-4">
 			<img src="{{$p->imagePath ? $p->imagePath : url('images/defaultImage.png')}}" class="img-fluid" alt="image not found"/>
 		</div>
 		<hr/>
